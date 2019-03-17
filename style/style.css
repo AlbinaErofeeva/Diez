@@ -183,6 +183,10 @@ span:after {
   color: white;
 }
 
+.text1{
+  display: none;
+}
+
 .promo--text{
   padding-top: 25px;
   font-family: 'PT Sans';
@@ -214,31 +218,42 @@ span:after {
   text-decoration: none;
 }
 
-.directions{
+.directions,
+.advantages,
+.video{
   display: flex;
   flex-wrap: row;
   margin-top: 25px;
 }
 
-.directions--row{
+.directions--row,
+.advantages--row,
+.contacts--row{
   display: flex;
   flex-direction: column;
 }
 
-.directions--title{
+.directions--title,
+.advantages--title,
+.video--title,
+.contacts--title{
   font-family: 'Prata';
   font-size: 30px;
   line-height: 30px;
   letter-spacing: 0.003px;
   font-weight: 400;
-  padding: 4px;
   position: relative;
   padding: 7px;
 }
 
-
 .directions--title:before,
-.directions--title:after {
+.advantages--title:before,
+.directions--title:after,
+.advantages--title:after,
+.video--title:before,
+.video--title:after,
+.contacts--title:before,
+.contacts--title:after{
   content: '';
   position: absolute;
   width: 228px;
@@ -246,53 +261,77 @@ span:after {
   background-color: #eec643;
 }
 
-.directions--title::before {
+.directions--title::before,
+.advantages--title:before,
+.video--title:before,
+.contacts--title:before{
   top: 0;
   left: 0;
 }
 
-.directions--title::after {
+.directions--title::after,
+.advantages--title:after,
+.video--title:after,
+.contacts--title:after {
   bottom: 0;
   left: 0;
 }
 
 .direction_item1,
 .direction_item2,
-.direction_item3 {
+.direction_item3,
+.advantages_item1,
+.advantages_item2,
+.advantages_item3,
+.video_item1,
+.video_item2,
+.video_item3,
+.video_item4{
   background-repeat: no-repeat;
   background-size: 100% 100%;
   padding-top: 12px;
   width: 288px;
   height: 143px;
-  margin: 12px auto;
   padding: 0;
 }
 
 .direction_item1{
   background-image: url(../img/directions_card_img_2.jpg);
+  margin-top: 12px;
 }
 .direction_item2{
   background-image: url(../img/directions_card_img_1.jpg);
+  margin-top: 16px;
+}
+
+.directions--row--items,
+.advantages--row--items{
+  display: inline-flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 .direction_item3{
   background-image: url(../img/directions_card_img_3.jpg);
   width: 211px;
+  margin-top: 16px;
 }
 .direction_item4{
   display: none;
   padding: 0;
 }
 
-.direction_item5{
+.direction_item5,
+.advantages_item5{
   height: 143px;
-  position: relative;
   width: 57px;
   background-color: #eec643;
-  margin: 12px auto;
-  padding: 0;
-
+  margin-top: 16px;
+  position: relative;
+  margin-left: 16px;
 }
-.direction_form--text{
+.direction_form--text,
+.advantages_form--text{
   color: #021a23;
   text-transform: uppercase;
   font-family: PT Sans;
@@ -307,7 +346,8 @@ span:after {
   bottom: 40px;
 }
 
-.direction_item--title{
+.direction_item--title,
+.advantages_item--title{
   padding-left: 10px;
   padding-top: 32px;
   color: white;
@@ -318,7 +358,8 @@ span:after {
   font-weight: 400;
 }
 
-.direction_item--text{
+.direction_item--text,
+.advantages_item--text{
   padding-left: 10px;
   padding-top: 5px;
   color: white;
@@ -329,8 +370,117 @@ span:after {
   font-weight: 400;
 }
 
+.advantages_item1{
+  background-image: url(../img/advantages_card_img_1.jpg);
+  margin-top: 12px;
+}
 
+.advantages_item2{
+  background-image: url(../img/advantages_card_img_2.jpg);
+  margin-top: 16px;
+}
 
+.advantages_item3{
+  background-image: url(../img/advantages_card_img_3.jpg);
+  margin-top: 16px;
+  width: 211px;
+}
 
+.video{
+  position: relative;
+  margin-bottom: 33px;
+}
+.title{
+  position: absolute;
+}
 
+.video--row{
+  padding-top: 84px;
+  display: flex;
+}
 
+.video_item2,
+.video_item3,
+.video_item4{
+  margin-top: 17px;
+  display: none;
+}
+
+.video_item1{
+  background-image: url(../img/video_card_img_1.jpg);
+  margin-top: 17px;
+  height: 188px;
+  width: 240px;
+}
+
+.video_item2{
+  background-image: url(../img/video_card_img_2.jpg);
+}
+
+.video_item3{
+  background-image: url(../img/video_card_img_3.jpg);
+}
+
+.video_item4{
+  background-image: url(../img/video_card_img_4.jpg);
+}
+
+.video_item--title{
+  padding-left: 10px;
+  color: white;
+  font-family: PT Sans;
+  font-size: 18px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 400;
+  padding-top: 136px;
+}
+
+.video_item--text{
+  padding-left: 10px;
+  padding-top: 5px;
+  color: white;
+  font-family: PT Sans;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.contacts_title{
+  position: absolute;
+}
+
+.map{
+   background-image: url(../img/map.jpg);
+   height: 217px;
+   width: 286px;
+   margin-top: 17px;
+}
+
+.contacts_form{
+  margin-bottom: 30px;
+  width: 288px;
+  height: 60px;
+  background-color: #eec643;
+  text-align:  center;
+  padding: 22px;
+}
+
+.adress{
+  position: relative;
+  margin-top: 70px;
+}
+
+.adress--text1,
+.adress--text1{
+  font-family: PT Sans;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+footer{
+  display: none;
+}
