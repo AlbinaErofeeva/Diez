@@ -187,6 +187,36 @@ span:after {
   display: none;
 }
 
+input[type=submit]{
+  background: #eec643;
+  padding: 2px 8px 2px 8px;
+  color: white;
+  text-align: center;
+  border:0px;
+  margin-bottom: 30px;
+  width: 288px;
+  height: 60px;
+  font-family: 'PT Sans';
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+}
+
+.promo_form{
+  margin-top: 90px;
+}
+
+fieldset{
+  display:none;
+}
+
+.sign{
+  display: none;
+}
+
 .promo--text{
   padding-top: 25px;
   font-family: 'PT Sans';
@@ -195,16 +225,6 @@ span:after {
   letter-spacing: 0;
   font-weight: 400;
   color: white;
-}
-
-.promo_form{
-  margin-top: 90px;
-  margin-bottom: 30px;
-  width: 288px;
-  height: 60px;
-  background-color: #eec643;
-  text-align:  center;
-  padding: 22px;
 }
 
 .promo_form--text{
@@ -321,8 +341,7 @@ span:after {
   padding: 0;
 }
 
-.direction_item5,
-.advantages_item5{
+.direction_item5{
   height: 143px;
   width: 57px;
   background-color: #eec643;
@@ -330,8 +349,7 @@ span:after {
   position: relative;
   margin-left: 16px;
 }
-.direction_form--text,
-.advantages_form--text{
+.direction_form--text{
   color: #021a23;
   text-transform: uppercase;
   font-family: PT Sans;
@@ -384,6 +402,9 @@ span:after {
   background-image: url(../img/advantages_card_img_3.jpg);
   margin-top: 16px;
   width: 211px;
+}
+.lesson--rotate{
+  transform:rotate(-90deg); 
 }
 
 .video{
@@ -451,20 +472,14 @@ span:after {
   position: absolute;
 }
 
-.map{
-   background-image: url(../img/map.jpg);
+.contacts--map{
    height: 217px;
    width: 286px;
    margin-top: 17px;
 }
 
-.contacts_form{
-  margin-bottom: 30px;
-  width: 288px;
-  height: 60px;
-  background-color: #eec643;
-  text-align:  center;
-  padding: 22px;
+.contacts--form{
+  margin-top: 0;
 }
 
 .adress{

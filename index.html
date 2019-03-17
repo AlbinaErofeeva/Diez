@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="style/normalize.css">
   <link rel="stylesheet" href="style/fonts.css">
   <link rel="stylesheet" href="style/style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+    </script>
 </head>
 <body>
   <header>
@@ -42,7 +44,23 @@
           </div>
           <div class="col col--lg-1">
             <div class="promo_form">
-              <a href="#" class="promo_form--text"> Вводный урок </a>
+               <form align="left">
+                   <fieldset>
+                     <h4>Вводный урок</h4>
+                     <p>Попробуй любые напрвления бесплатно</p>
+                     <p><input value='Имя'></p>
+                     <p><input value='Телефон'></p>
+                     <select>
+                       <option selected="selected">Направления</option>
+                       <option>Гитара</option>
+                       <option>Вокал</option>
+                       <option>Фортепиано</option>
+                       <option>Лекции</option>
+                     </select>
+                    </fieldset>  
+                     <p class="sign"><input type="submit" value='Записаться'></p>
+                     <p class="lesson"><input type="submit" value='Вводный урок'></p>
+                </form>
             </div>
           </div>
         </div>
@@ -118,9 +136,23 @@
                 </div>
               </div>
               <div class="col  col--lg-1">
-                <div class="advantages_item5">
-                  <a href="#" class="advantages_form--text">все напрвления</a>
-                </div>
+                 <form align="left">
+                     <fieldset>
+                       <h4>Вводный урок</h4>
+                       <p>Попробуй любые напрвления бесплатно</p>
+                       <p><input value='Имя'></p>
+                       <p><input value='Телефон'></p>
+                       <select>
+                         <option selected="selected">Направления</option>
+                         <option>Гитара</option>
+                         <option>Вокал</option>
+                         <option>Фортепиано</option>
+                         <option>Лекции</option>
+                       </select>
+                      </fieldset>
+                       <p class="sign"><input type="submit" value='Записаться'></p>
+                       <p class="lesson--rotate"><input type="submit" value='Вводный урок'></p>
+                  </form>
               </div>
             </div>
         </div>
@@ -174,13 +206,36 @@
             </div>
             <div class="row contacts--row">
               <div class="col  col--lg-2">
-                  <div class="map"> </div>
+                <div class="contact--map" id="map" style="width: 286px; height: 217px">
+                  <script type="text/javascript">
+                  ymaps.ready(init);
+                  function init(){ 
+                      var myMap = new ymaps.Map("map", {
+                          center: [59.941988, 30.279411],
+                          zoom: 15
+                      });}
+                  </script>
+                </div>
               </div>
             </div>
             <div class="col  col--lg-1">
-              <div class="contacts_form">
-                <a href="#" class="promo_form--text"> Вводный урок </a>
-              </div>
+               <form align="left">
+                   <fieldset>
+                     <h4>Вводный урок</h4>
+                     <p>Попробуй любые напрвления бесплатно</p>
+                     <p><input value='Имя'></p>
+                     <p><input value='Телефон'></p>
+                     <select>
+                       <option selected="selected">Направления</option>
+                       <option>Гитара</option>
+                       <option>Вокал</option>
+                       <option>Фортепиано</option>
+                       <option>Лекции</option>
+                     </select>
+                    </fieldset>  
+                     <p class="sign"><input type="submit" value='Записаться'></p>
+                     <p class="lesson"><input type="submit" value='Вводный урок'></p>
+                </form>
             </div>
           </div>
         </div>
