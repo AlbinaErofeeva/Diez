@@ -30,6 +30,7 @@
   background-image: url(../img/bg_main.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  height: 535px;
 }
 
 .menu{
@@ -48,21 +49,20 @@
   font-size: 30px;
   font-weight: 400;
   line-height: auto;
+  padding-left: 0;
 }
 
 
-button{
-  transform: rotate(90deg);
-  position: absolute;
-  right: 0;
-  z-index: 2;
-}
 .burger {
   font-size: 0;
   width: 24px;
   height: 22px;
   border: none;
   background-color: transparent;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 0;
+  z-index: 2;
 }
 
 .burger:before,
@@ -187,34 +187,94 @@ span:after {
   display: none;
 }
 
-input[type=submit]{
-  background: #eec643;
-  padding: 2px 8px 2px 8px;
+input[type=submit] {
   color: white;
   text-align: center;
   border:0px;
-  margin-bottom: 30px;
-  width: 288px;
-  height: 60px;
   font-family: 'PT Sans';
   font-size: 16px;
   line-height: 22px;
   letter-spacing: 0;
   font-weight: 400;
-  color: white;
   text-transform: uppercase;
+  width: 270px;
+  height: 70px;  
+  opacity: 1;
+  background:black;
+}
+
+input[type=text], select{
+  border : 0 none;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: 'PT Sans';
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: #596063;
+  width: 210px;
+  border-bottom: 2px solid black;
+  padding: 3px;
+}
+select{
+  margin-bottom: 60px;
+}
+
+.promo_form--form{
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin-left: 8px;
+  top: -530px;
+  transition: all 1.5s linear;
+  position: absolute;
+  z-index: 4;
 }
 
 .promo_form{
-  margin-top: 90px;
+  overflow: hidden;
 }
 
-fieldset{
-  display:none;
+.lesson{
+  background: #eec643;
+  color: white;
+  text-align: center;
+  border:0px;
+  font-family: 'PT Sans';
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: 287px;
+  height: 70px; 
+  margin-top: 90px; 
+  margin-bottom: 32px;
+  z-index: 2;
+  position: absolute;
 }
 
-.sign{
-  display: none;
+.promo_form--title{
+  font-family: 'PT Sans';
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: 0;
+  font-weight: 400;
+  margin-top: 26px;
+}
+
+.form--text{
+  padding-top: 26px;
+  margin-bottom: 63px;
+  font-family: 'PT Sans';
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: #021a23;
 }
 
 .promo--text{
@@ -227,15 +287,8 @@ fieldset{
   color: white;
 }
 
-.promo_form--text{
-  color: white;
-  text-transform: uppercase;
-  font-family: PT Sans;
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: 0;
-  font-weight: 400;
-  text-decoration: none;
+.promo_form:hover .promo_form--form{
+  top: 0px;
 }
 
 .directions,
@@ -360,8 +413,9 @@ fieldset{
   text-decoration: none;
   position: absolute;
   transform:rotate(-90deg); 
-  left: -20px;
-  bottom: 40px;
+  bottom: 20px;
+  left: 0px;
+  right: 0;
 }
 
 .direction_item--title,
@@ -403,10 +457,42 @@ fieldset{
   margin-top: 16px;
   width: 211px;
 }
-.lesson--rotate{
-  transform:rotate(-90deg); 
+
+.advantages-lesson{
+  height: 143px;
+  width: 57px;
+  background: #eec643;
+  color: white;
+  border:0px;
+  font-family: 'PT Sans';
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: 59px;
+  height: 145px; 
+  margin-top: 15px;
+  margin-left: 13px;
+  z-index: 2;
+  position: absolute;
 }
 
+.advantages_form--form{
+  width: 270px;
+  background-color: #fff;
+  transition: all 3s linear;
+  position: absolute;
+  z-index: 4;
+  margin-left: 100px;
+  display: none;
+}
+
+.advantages_form:hover .advantages_form--form{
+  margin-left: -208px;
+    display: flex;
+  flex-direction: column;
+}
 .video{
   position: relative;
   margin-bottom: 33px;
@@ -418,6 +504,7 @@ fieldset{
 .video--row{
   padding-top: 84px;
   display: flex;
+  position: relative;
 }
 
 .video_item2,
@@ -475,7 +562,6 @@ fieldset{
 .contacts--map{
    height: 217px;
    width: 286px;
-   margin-top: 17px;
 }
 
 .contacts--form{
@@ -485,6 +571,7 @@ fieldset{
 .adress{
   position: relative;
   margin-top: 70px;
+  margin-bottom: 15px;
 }
 
 .adress--text1,
@@ -496,6 +583,34 @@ fieldset{
   font-weight: 400;
 }
 
+
+.contact_form{
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin-left: 8px;
+  transition: all 1.5s linear;
+  position: absolute;
+  z-index: 4;
+
+}
+
+.contact_form--form{
+  overflow: hidden;
+}
+
+/* .contact_form {
+  overflow: hidden;
+}
+ */
+
+.contact_form:hover .contact_form--form{
+  
+}
+
+
 footer{
   display: none;
 }
+
