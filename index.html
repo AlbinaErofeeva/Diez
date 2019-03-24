@@ -6,64 +6,71 @@
   <link rel="stylesheet" href="style/normalize.css">
   <link rel="stylesheet" href="style/fonts.css">
   <link rel="stylesheet" href="style/style.css">
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
-    </script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/script.js"></script> 
 </head>
 <body>
   <header>
     <div class="container header">
       <div class="wrapper">
         <div class="row menu">
-            <div class="col col--lg-1">
-              <div class="logo">
-                <p class="logo--text"> Diez </p>
+          <div class="col col--lg-1">
+            <div class="logo">
+              <p class="logo--text"> Diez </p>
+            </div>
+          </div>
+          <div class="col--lg-3">
+            <nav class="menu_desktop">
+              <ul>
+                <li class="menu_desktop--link"><a href="#directions" class="menu_desktop--list">Направления</a></li>
+                <li class="menu_desktop--link"><a href="#advantages" class="menu_desktop--list">О школе</a></li>
+                <li class="menu_desktop--link"><a href="#video" class="menu_desktop--list">Видео</a></li>
+                <li class="menu_desktop--link"><a href="#contacts" class="menu_desktop--list">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="menu--hidden">
+              <button class="mobile-menu"> 
+                <span class="mobile-menu--items">Ввобный урок</span>
+              </button>
+              <div class="menu--nav">
+                <nav>
+                  <ul class="menu-nav--list">
+                    <li><a href="#directions" class="menu-nav--list--item">Направления</a></li>
+                    <li><a href="#advantages" class="menu-nav--list--item">О школе</a></li>
+                    <li><a href="#video" class="menu-nav--list--item">Видео</a></li>
+                    <li><a href="#contacts" class="menu-nav--list--item">Контакты</a></li>
+                  </ul>
+                </nav>
               </div>
             </div>
-            <div class="col--lg-3">
-              <div class="menu--hidden">
-                <button class="burger"> 
-                  <span>Ввобный урок</span>
-                </button>
-                <div class="menu--nav">
-                  <nav class="menu--nav--item">
-                    <ul class="menu-nav--list">
-                      <li><a href="#directions" class="menu-nav--list--item">Направления</a></li>
-                      <li><a href="#advantages" class="menu-nav--list--item">О школе</a></li>
-                      <li><a href="#video" class="menu-nav--list--item">Видео</a></li>
-                      <li><a href="#contacts" class="menu-nav--list--item">Контакты</a></li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
+          </div>
         </div>
         <div class="row promo">
           <div class="col col--lg-3">
-            <h1 class="promo--title"> <span class="text1">Diez - </span>Школа музыкального искусства</h1>
-            <p class="promo--text">Научим петь, играть на&nbsp;инструментах, получать удовольствие от&nbsp;музыки и&nbsp;не&nbsp;бояться сцены</p>
+            <h1 class="promo--title"> <span class="text1">Diez — </span>Школа <br>музыкального искусства</h1>
+            <p class="promo--text">Научим петь, играть на&nbsp;инструментах, <span class= "promo--text_hidden_desktop"> получать удовольствие от&nbsp;музыки и&nbsp;не&nbsp;бояться сцены </span> <span class= "promo--text_hidden_mobile"> не&nbsp;бояться сцены и&nbsp;получать удовольствие от&nbsp;музыки </span></p>
           </div>
           <div class="col col--lg-1">
-
+            <button class="lesson"> Вводный урок </button>
             <div class="promo_form">
-              <button class="lesson"> Вводный урок </button>
-               <form align="left" class="promo_form--form">
-                 <fieldset>
-                     <h3 class="promo_form--title">Вводный урок</h3>
-                     <p class="form--text">Попробуй любые напрвления бесплатно</p>
-                     <input type="text" value='Имя'>
-                     <input type="text" value='Телефон'>
-                     <select>
-                       <option selected="selected">Направления</option>
-                       <option>Гитара</option>
-                       <option>Вокал</option>
-                       <option>Фортепиано</option>
-                       <option>Лекции</option>
-                       </select></p>
-                   </fieldset>
-                   <input type="submit" value='Записаться' class="sign">
-                </form> 
+              <form class="promo_form--form">
+                <fieldset class="promo_form--fieldset">
+                  <p class="promo_form--title">Вводный урок</p>
+                  <p class="form--text">Попробуй любые направления бесплатно</p>
+                  <input type="text" value='Имя'>
+                  <input type="text" value='Телефон'>
+                  <select>
+                    <option selected="selected">Направления</option>
+                    <option>Гитара</option>
+                    <option>Вокал</option>
+                    <option>Фортепиано</option>
+                    <option>Лекции</option>
+                  </select>
+                </fieldset>
+                <input type="submit" value='Записаться'>
+              </form> 
             </div>
-
           </div>
         </div>
       </div>
@@ -72,124 +79,138 @@
   <main>
     <section class="directions" id="directions">
       <div class="container">
-        <div class="wrapper">
+        <div class="wrapper directions--desktop">
           <h2 class="directions--title">Растим музыкантов</h2>
           <div class="row directions--row">
             <div class="col  col--lg-2">
               <div class="direction_item1">
-                <h4 class="direction_item--title">Вокал</h4>
-                <p class="direction_item--text">Пой, как Селин Дион и Эми <br> Вайнхаус</p>
+                <h3 class="direction_item--title">Вокал</h3>
+                <p class="direction_item--text">Пой, как Селин Дион и Эми&nbsp; Вайнхаус</p>
+                <p class="direction_item--text_desktop">Академический, рок, <br> эстрадный, джазовый </p>
               </div>
             </div>
             <div class="col  col--lg-2  col--lg-title-padding  col--lg-first">
-                <div class="direction_item2">
-                  <h4 class="direction_item--title">Гитара</h4>
-                  <p class="direction_item--text">Начни играть, как Джими Хендрикс</p>
-                </div>
+              <div class="direction_item2">
+                <h3 class="direction_item2--title">Гитара</h3>
+                <p class="direction_item--text">Начни играть, как Джими&nbsp; Хендрикс</p>
+                <p class="direction_item--text_desktop"> Хочешь играть как Джими <br> Хендрикс, Би Би Кинг или<br> Андрес Сеговия— мы<br> научим </p>
+                <p class="direction_item2--text_desktop">1 урок от 800₽</p>
               </div>
             </div>
-            <div class="row directions--row--items">
-              <div class="col  col--lg-2  col--lg-title-padding">
-                <div class="direction_item3">
-                  <h4 class="direction_item--title">Фортепиано</h4>
-                  <p class="direction_item--text">Чувствуй клавиши, как Людовико Эйнауди</p>
-                </div>
-              </div>
-              <div class="col  col--lg-1 ">
-                <div class="direction_item4">
-                  <h4 class="direction_item--title">Лекции</h>
-                  <p class="direction_item--text">Подтяни свои знания в теории музыки</p>
-                </div>
-              </div>
-              <div class="col  col--lg-1">
-                <div class="direction_item5">
-                  <a href="#" class="direction_form--text">все напрвления</a>
-                </div>
+          </div>
+          <div class="row directions--row--items">
+            <div class="col  col--lg-2 ">
+              <div class="direction_item3">
+                <h3 class="direction_item--title">Фортепиано</h3>
+                <p class="direction_item--text">Чувствуй клавиши, как Людовико Эйнауди</p>
+                <p class="direction_item--text_desktop"> Академический, рок,<br> эстрадный, джазовый  </p>
               </div>
             </div>
+            <div class="col  col--lg-1 ">
+              <div class="direction_item4">
+                <h3 class="direction_item--title"> Лекции </h3>
+                <p class="direction_item--text"> Подтяни свои знания в&nbsp; теории музыки </p>
+                <p class="direction_item--text_desktop"> Подтяни свои знания в теории музыки</p>
+              </div>
+            </div>
+            <div class="col  col--lg-1">
+              <div class="direction_item5">
+                <a href="#" class="direction_form--text">все напрвления</a>
+                <h3 class="direction_item4--title"> Все <br> напрвления </h3>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <section class="advantages" id="advantages">
       <div class="container">
         <div class="wrapper">
-          <div class="row">
-            <div class="col  col--lg-2">
-              <div class="col  col--lg-2">
-                <h2 class="advantages--title">Задаем темп</h2>
-              </div>
+          <div class="row advantages--row">
+            <div class="advantages--title">
+              <h2 class="advantages--title-text">Задаем темп</h2>
+            </div>
+            <div class="col  col--lg-2 advantages--row--items">
               <div class="col  col--lg-2">
                 <div class="advantages_item1">
-                  <h4 class="advantages_item--title">Состав</h4>
+                  <h3 class="advantages_item--title">Состав</h3>
                   <p class="advantages_item--text">Учись только у <br> профессионалов </p>
+                  <p class="advantages_item--text_desktop"> Тебя будут обучать  профессионалы&nbsp;&nbsp; с высшим музыкальным&nbsp; образованием </p>
                 </div>
               </div>
               <div class="col  col--lg-2">
                 <div class="advantages_item2">
-                  <h4 class="advantages_item--title">Результат</h4>
-                  <p class="advantages_item--text">Выуступай на отчетных <br>концертах</p>
+                  <h3 class="advantages_item--title">Результат</h3>
+                  <p class="advantages_item--text">Выуступай на отчетных<br> концертах</p>
+                  <p class="advantages_item--text_desktop"> Выступи на&nbsp;отчетном концерте через три&nbsp; месяца обучения </p>
                 </div>
               </div>
             </div>
-            <div class="row advantages--row--items">
-              <div class="col  col--lg-1  col--lg-title-padding">
+            <div class="col  col--lg-2 row--advan">
+              <div class="col  col--lg-2">
                 <div class="advantages_item3">
-                  <h4 class="advantages_item--title">Студия</h4>
+                  <h3 class="advantages_item--title">Студия</h3>
                   <p class="advantages_item--text">Записывай песни каждый месяц</p>
+                  <p class="advantages_item--text_desktop"> Запиши свою песню&nbsp; в нашей студии&nbsp; звукозаписи, одна песня в&nbsp;месяц бесплатно </p>
                 </div>
               </div>
-              <div class="col  col--lg-1">
+              <div class="col  col--lg-2">
                 <div class="advantages_form">
-                  <button class="advantages-lesson"> <p class="direction_form--text"> Вводный урок </p></button>
-                   <form align="left" class="advantages_form--form">
-                     <fieldset>
-                         <h3 class="promo_form--title">Вводный урок</h3>
-                         <p class="form--text">Попробуй любые напрвления бесплатно</p>
-                         <input type="text" value='Имя'>
-                         <input type="text" value='Телефон'>
-                         <select>
-                           <option selected="selected">Направления</option>
-                           <option>Гитара</option>
-                           <option>Вокал</option>
-                           <option>Фортепиано</option>
-                           <option>Лекции</option>
-                           </select></p>
-                       </fieldset>
-                       <input type="submit" value='Записаться' class="sign">
-                    </form> 
+                  <button class="advantages-lesson"> <span class="direction_form--text"> Вводный урок </span></button>
+                  <form class="advantages_form--form">
+                    <fieldset class="advantages_form--fieldset">
+                      <p class="advantages_form--title">Вводный урок</p>
+                      <p class="advantages_form--text">Попробуй любые направления бесплатно</p>
+                      <input type="text" value='Имя'>
+                      <input type="text" value='Телефон'>
+                      <select class="advantages_form--select">
+                      <option selected="selected">Направления</option>
+                      <option>Гитара</option>
+                      <option>Вокал</option>
+                      <option>Фортепиано</option>
+                      <option>Лекции</option>
+                      </select>
+                    </fieldset>
+                    <input type="submit" value='Записаться'>
+                  </form> 
                 </div>
               </div>
             </div>
+          </div>
         </div>
       </div>
     </section>
     <section class="video" id="video">
       <div class="container">
         <div class="wrapper">
-          <div class="title">
-            <h2 class="video--title">В стенах <br>школы</h2>
-          </div>
+          <h2 class="video--title">В стенах школы</h2>
           <div class="row video--row">
             <div class="col  col--lg-3">
               <div class="video_item1">
-                <h4 class="video_item--title">Зимняя вишня</h4>
-                <p class="video_item--text">Финальный концерт 2018 года</p>
+                <a href="#"><img src="img/play_button.png" alt="кнопка проигрывания видео" class="video_img"></a>
+                <h3 class="video_item1--title">Зимняя вишня</h3>
+                <p class="video_item--text-mobile">Финальный концерт 2018 года</p>
+                <p class="video_item1--text"> Заключительный зимний <br>концерт 2017 года<br>выступало 97 учеников </p>
               </div>
             </div>
             <div class="col  col--lg-1">
               <div class="video_item2">
-                <h4 class="video_item--title">Янг Чжо</h4>
+                <a href="#"><img src="img/play_button_mini.png" alt="кнопка проигрывания видео" class="video_img2"></a>
+                <h3 class="video_item--title">Янг Чжо</h3>
                 <p class="video_item--text">Репетиция сольной партии скрипки</p>
               </div>
               <div class="video_item3">
-                <h4 class="video_item--title">Летний штиль</h4>
+                <a href="#"><img src="img/play_button_mini.png" alt="кнопка проигрывания видео" class="video_img2"></a>
+                <h3 class="video_item--title">Летний штиль</h3>
                 <p class="video_item--text">За кулисами концерта</p>
               </div>
               <div class="video_item4">
-                <h4 class="video_item--title">Сергей Трофимов</h4>
+                <a href="#"><img src="img/play_button_mini.png" alt="кнопка проигрывания видео" class="video_img2"></a>
+                <h3 class="video_item--title">Сергей Трофимов</h3>
                 <p class="video_item--text">ЛЮБЭ — Выйду в поле с конем</p>
               </div>
             </div>
+          </div>
         </div>
       </div>
     </section>
@@ -197,86 +218,77 @@
       <div class="container">
         <div class="wrapper">
           <div class="row contacts--row">
-
-            <div class="col  col--lg-2">
+            <div class="col  col--lg-3">
               <div class="contacts_title">
                 <h2 class="contacts--title">Ждем тебя</h2>
               </div>
-            </div>
-            <div class="col  col--lg-3">
               <div class="adress">
                 <p class="adress--text1">СПб, 6-я Линия ВО 42</p>
                 <p class="adress--text2">+7 (812) 566 56 56</p>
               </div>
-            </div>
-            <div class="row contacts--row">
-              <div class="col  col--lg-2">
-                <div class="contact--map" id="map" style="width: 286px; height: 217px">
-                  <script type="text/javascript">
-                  ymaps.ready(init);
-                  function init(){ 
-                      var myMap = new ymaps.Map("map", {
-                          center: [59.941988, 30.279411],
-                          zoom: 15
-                      });}
-                  </script>
+              <div class="row contacts--row">
+                <div class="col  col--lg-3">
+                  <div class="contact--map" id="map">
+                    <script type="text/javascript">
+                    ymaps.ready(init);
+                    function init(){ 
+                        var myMap = new ymaps.Map("map", {
+                            center: [59.941988, 30.279411],
+                            zoom: 15
+                        });}
+                    </script>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col  col--lg-1">
-
-                <div class="contact_form">
-                  <button class="lesson"> Вводный урок </button>
-                  <form align="left" class="contact_form--form">
-                     <fieldset>
-                         <h3 class="promo_form--title">Вводный урок</h3>
-                         <p class="form--text">Попробуй любые напрвления бесплатно</p>
-                         <input type="text" value='Имя'>
-                         <input type="text" value='Телефон'>
-                         <select>
-                           <option selected="selected">Направления</option>
-                           <option>Гитара</option>
-                           <option>Вокал</option>
-                           <option>Фортепиано</option>
-                           <option>Лекции</option>
-                           </select></p>
-                       </fieldset>
-                       <input type="submit" value='Записаться' class="sign">
-                    </form> 
-                </div>
-
+              <div class="advantages_form">
+                <button class="contact--lesson"> Вводный урок </button>
+                <form class="advantages_form--form">
+                  <fieldset class="advantages_form--fieldset">
+                    <p class="advantages_form--title">Вводный урок</p>
+                    <p class="advantages_form--text">Попробуй любые направления бесплатно</p>
+                    <input type="text" value='Имя'>
+                    <input type="text" value='Телефон'>
+                    <select class="advantages_form--select">
+                    <option selected="selected">Направления</option>
+                    <option>Гитара</option>
+                    <option>Вокал</option>
+                    <option>Фортепиано</option>
+                    <option>Лекции</option>
+                    </select>
+                  </fieldset>
+                  <input type="submit" value='Записаться' class="advantages_form--input">
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
   </main>
   <footer>
-      <div class="container">
-        <div class="wrapper">
-          <div class="row menu">
-              <div class="col col--lg-1">
-                <div class="logo">
-                  <p class="logo--text"> Diez </p>
-                </div>
-              </div>
-              <div class="col--lg-3">
-                <div class="menu--hidden">
-                  <button class="burger"> 
-                    <span>Ввобный урок</span>
-                  </button>
-                  <div class="menu--nav">
-                    <nav class="menu--nav--item">
-                      <ul class="menu-nav--list">
-                        <li><a href="#directions" class="menu-nav--list--item">Направления</a></li>
-                        <li><a href="#advantages" class="menu-nav--list--item">О школе</a></li>
-                        <li><a href="#video" class="menu-nav--list--item">Видео</a></li>
-                        <li><a href="" class="menu-nav--list--item">Контакты</a></li>
-                      </ul>
-                    </nav>
-                  </div>
-                </div>
-              </div>
+    <div class="container">
+      <div class="wrapper">
+        <div class="row menu--footer">
+          <div class="col col--lg-1">
+            <div class="logo">
+              <p class="logo--text"> Diez </p>
             </div>
+          </div>
+          <div class="col--lg-3">
+            <nav class="menu_desktop">
+              <ul>
+                <li class="menu_desktop--link"><a href="#" class="menu_desktop--list">YOUTUBE</a></li>
+                <li class="menu_desktop--link"><a href="#" class="menu_desktop--list">INSTAGRAM</a></li>
+                <li class="menu_desktop--link"><a href="#" class="menu_desktop--list">FACEBOOK</a></li>
+                <li class="menu_desktop--link"><a href="#" class="menu_desktop--list">VKONTAKTE</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
