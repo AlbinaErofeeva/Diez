@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Diez</title>
   <link rel="stylesheet" href="style/normalize.css">
   <link rel="stylesheet" href="style/fonts.css">
+  <link rel="stylesheet" type="text/css" href="style/slick.css">
   <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" type="text/css" href="style/choices.min.css">
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/choices.min.js"></script>
   <script src="js/script.js"></script> 
 </head>
 <body>
   <header>
     <div class="container header">
       <div class="wrapper">
-        <div class="row menu">
+        <div class="row menu--header">
           <div class="col col--lg-1">
             <div class="logo">
               <p class="logo--text"> Diez </p>
@@ -184,30 +188,60 @@
       <div class="container">
         <div class="wrapper">
           <h2 class="video--title">В стенах школы</h2>
-          <div class="row video--row">
-            <div class="col  col--lg-3">
-              <div class="video_item1">
-                <a href="#"><img src="img/play_button.png" alt="кнопка проигрывания видео" class="video_img"></a>
-                <h3 class="video_item1--title">Зимняя вишня</h3>
-                <p class="video_item--text-mobile">Финальный концерт 2018 года</p>
-                <p class="video_item1--text"> Заключительный зимний <br>концерт 2017 года<br>выступало 97 учеников </p>
+          <div class="video_mobile--hidden">
+            <div class="row video--row">
+               <div class="col  col--lg-3">
+                <div class="video_item1">
+                  <a href="#"><img src="img/play_button.png" alt="кнопка проигрывания видео" class="video_img"></a>
+                  <h3 class="video_item1--title">Зимняя вишня</h3>
+                  <p class="video_item--text-mobile">Финальный концерт 2018 года</p>
+                  <p class="video_item1--text"> Заключительный зимний <br>концерт 2017 года<br>выступало 97 учеников </p>
+                </div>
+              </div>
+              <div class="col  col--lg-1">
+                <div class="video_item2">
+                  <a href="#"><img src="img/play_button_mini.png" alt="кнопка проигрывания видео" class="video_img2"></a>
+                  <h3 class="video_item--title">Янг Чжо</h3>
+                  <p class="video_item--text">Репетиция сольной партии скрипки</p>
+                </div>
+                <div class="video_item3">
+                  <a href="#"><img src="img/play_button_mini.png" alt="кнопка проигрывания видео" class="video_img2"></a>
+                  <h3 class="video_item--title">Летний штиль</h3>
+                  <p class="video_item--text">За кулисами концерта</p>
+                </div>
+                <div class="video_item4">
+                  <a href="#"><img src="img/play_button_mini.png" alt="кнопка проигрывания видео" class="video_img2"></a>
+                  <h3 class="video_item--title">Сергей Трофимов</h3>
+                  <p class="video_item--text">ЛЮБЭ — Выйду в поле с конем</p>
+                </div>
               </div>
             </div>
-            <div class="col  col--lg-1">
-              <div class="video_item2">
-                <a href="#"><img src="img/play_button_mini.png" alt="кнопка проигрывания видео" class="video_img2"></a>
-                <h3 class="video_item--title">Янг Чжо</h3>
-                <p class="video_item--text">Репетиция сольной партии скрипки</p>
-              </div>
-              <div class="video_item3">
-                <a href="#"><img src="img/play_button_mini.png" alt="кнопка проигрывания видео" class="video_img2"></a>
-                <h3 class="video_item--title">Летний штиль</h3>
-                <p class="video_item--text">За кулисами концерта</p>
-              </div>
-              <div class="video_item4">
-                <a href="#"><img src="img/play_button_mini.png" alt="кнопка проигрывания видео" class="video_img2"></a>
-                <h3 class="video_item--title">Сергей Трофимов</h3>
-                <p class="video_item--text">ЛЮБЭ — Выйду в поле с конем</p>
+          </div>
+          <div class="row video--row">
+            <div class="col  col--lg-4">
+              <div class="video_mobile--slider">
+                <div class="slider" id="slider">
+                  <div class="video_item1 slider_item">
+                    <a href="#"><img src="img/play_button_mini.png" alt="кнопка проигрывания видео" class="video_img"></a>
+                    <h3 class="video_item1--title">Зимняя вишня</h3>
+                    <p class="video_item--text-mobile">Финальный концерт 2018 года</p>
+                  </div>
+                  <div class="video_item2 slider_item">
+                    <a href="#"><img src="img/play_button_mini.png" alt="кнопка проигрывания видео" class="video_img"></a>
+                    <h3 class="video_item1--title">Янг Чжо</h3>
+                    <p class="video_item--text-mobile">Репетиция сольной партии скрипки</p>
+                  </div>
+                  <div class="video_item3 slider_item">
+                    <a href="#"><img src="img/play_button_mini.png" alt="кнопка проигрывания видео" class="video_img"></a>
+                    <h3 class="video_item1--title">Летний штиль</h3>
+                    <p class="video_item--text-mobile">За кулисами концерта</p>
+                  </div>
+                  <div class="video_item4 slider_item">
+                    <a href="#"><img src="img/play_button_mini.png" alt="кнопка проигрывания видео" class="video_img"></a>
+                    <h3 class="video_item1--title">Сергей Трофимов</h3>
+                    <p class="video_item--text-mobile">ЛЮБЭ — Выйду в поле с конем</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

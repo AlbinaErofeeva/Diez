@@ -17,7 +17,7 @@ $(document).ready(function(){
 
   function sliderCheck() {
     var width = $(window).width();
-    if (width<768) {
+    if (width<780) {
      $('#slider').slick();
     }
     else{
