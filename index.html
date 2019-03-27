@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Diez</title>
@@ -9,14 +9,10 @@
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" type="text/css" href="style/choices.min.css">
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/slick.min.js"></script>
-  <script src="js/choices.min.js"></script>
-  <script src="js/script.js"></script> 
 </head>
 <body>
   <header>
-    <div class="container header">
+    <div class="container">
       <div class="wrapper">
         <div class="row menu--header">
           <div class="col col--lg-1">
@@ -34,8 +30,8 @@
               </ul>
             </nav>
             <div class="menu--hidden">
-              <button class="mobile-menu"> 
-                <span class="mobile-menu--items">Ввобный урок</span>
+              <button class="mobile-menu" id="mobile-menu"> 
+                <span class="mobile-menu--items" id="mobile-menu--items">Ввобный урок</span>
               </button>
               <div class="menu--nav">
                 <nav>
@@ -97,7 +93,7 @@
               <div class="direction_item2">
                 <h3 class="direction_item2--title">Гитара</h3>
                 <p class="direction_item--text">Начни играть, как Джими&nbsp; Хендрикс</p>
-                <p class="direction_item--text_desktop"> Хочешь играть как Джими <br> Хендрикс, Би Би Кинг или<br> Андрес Сеговия— мы<br> научим </p>
+                <p class="direction_item--text_desktop"> Хочешь играть как Джими <br> Хендрикс, Би Би Кинг или<br> Андрес Сеговия— мы<br> научим </p>
                 <p class="direction_item2--text_desktop">1 урок от 800₽</p>
               </div>
             </div>
@@ -113,14 +109,14 @@
             <div class="col  col--lg-1 ">
               <div class="direction_item4">
                 <h3 class="direction_item--title"> Лекции </h3>
-                <p class="direction_item--text"> Подтяни свои знания в&nbsp; теории музыки </p>
-                <p class="direction_item--text_desktop"> Подтяни свои знания в теории музыки</p>
+                <p class="direction_item--text"> Подтяни свои знания в&nbsp; теории музыки </p>
+                <p class="direction_item--text_desktop"> Подтяни свои знания в теории музыки</p>
               </div>
             </div>
             <div class="col  col--lg-1">
               <div class="direction_item5">
                 <a href="#" class="direction_form--text">все напрвления</a>
-                <h3 class="direction_item4--title"> Все <br> напрвления </h3>
+                <h3 class="direction_item4--title"> Все <br> направления </h3>
               </div>
             </div>
           </div>
@@ -138,14 +134,14 @@
               <div class="col  col--lg-2">
                 <div class="advantages_item1">
                   <h3 class="advantages_item--title">Состав</h3>
-                  <p class="advantages_item--text">Учись только у <br> профессионалов </p>
-                  <p class="advantages_item--text_desktop"> Тебя будут обучать  профессионалы&nbsp;&nbsp; с высшим музыкальным&nbsp; образованием </p>
+                  <p class="advantages_item--text">Учись только у <br> профессионалов </p>
+                  <p class="advantages_item--text_desktop"> Тебя будут обучать  профессионалы&nbsp;&nbsp; с высшим музыкальным&nbsp; образованием </p>
                 </div>
               </div>
               <div class="col  col--lg-2">
                 <div class="advantages_item2">
                   <h3 class="advantages_item--title">Результат</h3>
-                  <p class="advantages_item--text">Выуступай на отчетных<br> концертах</p>
+                  <p class="advantages_item--text">Выуступай на отчетных<br> концертах</p>
                   <p class="advantages_item--text_desktop"> Выступи на&nbsp;отчетном концерте через три&nbsp; месяца обучения </p>
                 </div>
               </div>
@@ -195,7 +191,7 @@
                   <a href="#"><img src="img/play_button.png" alt="кнопка проигрывания видео" class="video_img"></a>
                   <h3 class="video_item1--title">Зимняя вишня</h3>
                   <p class="video_item--text-mobile">Финальный концерт 2018 года</p>
-                  <p class="video_item1--text"> Заключительный зимний <br>концерт 2017 года<br>выступало 97 учеников </p>
+                  <p class="video_item1--text"> Заключительный зимний <br>концерт 2017 года<br>выступало 97 учеников </p>
                 </div>
               </div>
               <div class="col  col--lg-1">
@@ -217,9 +213,7 @@
               </div>
             </div>
           </div>
-          <div class="row video--row">
-            <div class="col  col--lg-4">
-              <div class="video_mobile--slider">
+              <div class="menu">
                 <div class="slider" id="slider">
                   <div class="video_item1 slider_item">
                     <a href="#"><img src="img/play_button_mini.png" alt="кнопка проигрывания видео" class="video_img"></a>
@@ -319,10 +313,14 @@
                 <li class="menu_desktop--link"><a href="#" class="menu_desktop--list">VKONTAKTE</a></li>
               </ul>
             </nav>
-          </div>
+          </div> 
         </div>
       </div>
     </div>
   </footer>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/choices.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
