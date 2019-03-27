@@ -11,26 +11,30 @@
   height: 100%;
 }
 
-  .col--lg-1 { width: 25%; }
-  .col--lg-2 { width: 50%; }
-  .col--lg-3 { width: 75%; }
+  .col--lg-1 { width: 100%; }
+  .col--lg-2 { width: 100%; }
+  .col--lg-3 { width: 100%; }
   .col--lg-4 { width: 100%; }
 
 .container{
-  width: 320px;
   margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+  width: 100%;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .wrapper{
   margin: 0 auto;
-  width: 288px;
+  width: 100%
 }
 
 header{
   background: url(../img/bg_main.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-/*   background-position: -260px 0px; */
+  background-position: center;
 }
 
 .menu--header{
@@ -38,6 +42,8 @@ header{
   padding-bottom: 104px;
   width: 100%;
   position: relative;
+  display: flex;
+  flex-wrap:nowrap;
 }
 
 .logo{
@@ -119,46 +125,25 @@ header{
   opacity: 0;
 }
 
-
-/* .mobile-menu:hover .mobile-menu--items:before{
- transform: rotate(-135deg);
-}
-
-.mobile-menu:hover .mobile-menu--items:after{
- transform: rotate(-45deg);
-}  */
-
-/* .mobile-menu:hover:before {
- transform: translate(-100%);
- opacity: 0;
-}
-
-.mobile-menu:hover:after {
- transform: translate(100%);
- opacity: 0;
-}
- */
-
 .menu--hidden {
   overflow: hidden;
 }
 
 .menu--nav{
-  height: 255px;
-  width: 320px;
   background-color: black;
   position: absolute;
   top: -270px;
   right: 0;
-  left: -16px;
   transition: all 1s;
   z-index: 1;
+  height: 255px;
+  width: 100%;
 }
 
 .menu-nav--list {
   list-style: none;
   padding-top: 80px;
-  padding-left: 16px;
+  padding-left: 32px;
 }
 
 .menu-nav--list--item{
@@ -253,6 +238,9 @@ select{
   margin-top: 85px; 
   margin-bottom: 32px;
   z-index: 2;
+  min-width: 287px;
+  max-width: 576px;
+  width: 100%;
 }
 
 .promo_form--title{
@@ -325,21 +313,35 @@ select{
 
 .advantages--title-text{
   position: absolute;
-  width: 500px;
+  width: 100%;
 }
 
+.direction_item4--hidden{
+  width: 0;
+}
+
+.directions--row--items{
+  flex-wrap: nowrap;
+}
 
 .directions--title:before,
 .advantages--title-text:before,
 .directions--title:after,
 .advantages--title-text:after,
 .video--title:before,
-.video--title:after,
+.video--title:after{
+  content: '';
+  position: absolute;
+  width: 75%;
+  height: 2px;
+  background-color: #eec643;
+}
+
 .contacts--title:before,
 .contacts--title:after{
   content: '';
   position: absolute;
-  width: 228px;
+  width: 100%;
   height: 2px;
   background-color: #eec643;
 }
@@ -368,10 +370,11 @@ select{
 .advantages_item3{
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   padding-top: 12px;
-  width: 288px;
   height: 143px;
   padding: 0;
+  width: 100%;
 }
 
 .video_item1,
@@ -380,10 +383,11 @@ select{
 .video_item4{
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   padding-top: 16px;
-  width: 240px;
   height: 185px;
   padding: 0;
+  width: 100%;
 }
 
 .advantages--row--items{
@@ -408,9 +412,14 @@ select{
 }
 .direction_item3{
   background-image: url(../img/directions_card_img_3.jpg);
-  width: 211px;
   margin-top: 16px;
+  width: 100%;
 }
+
+.direction_item3--mobile{
+  flex: 1 0 75%;
+}
+
 .direction_item4{
   display: none;
   padding: 0;
@@ -418,15 +427,15 @@ select{
 
 .direction_item5{
   height: 143px;
-  width: 57px;
+  width: 89%;
   background-color: #eec643;
   margin-top: 16px;
   position: relative;
-  margin-left: 16px;
+  margin-left: 10%;
 }
 
 .direction_form--text{
-  color: white;
+  color: black;
   text-align: left;
   text-transform: uppercase;
   font-family: PT Sans;
@@ -437,9 +446,25 @@ select{
   text-decoration: none;
   position: absolute;
   transform:rotate(-90deg); 
-  bottom: 20px;
-  left: 0px;
-  right: 0;
+  left: 38%;
+  right: 50%;
+  top: 73%;
+}
+
+.advantages-lesson_form--text{
+  color: white;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: PT Sans;
+  font-size: 16px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 400;
+  text-decoration: none;
+  position: absolute;
+  transform:rotate(-90deg);
+  left: 75%;
+  top: 47%;
 }
 
 .direction_item--title,
@@ -479,7 +504,6 @@ select{
 .advantages_item3{
   background-image: url(../img/advantages_card_img_3.jpg);
   margin-top: 16px;
-  width: 211px;
 }
 
 .row--advan{
@@ -489,8 +513,7 @@ select{
 }
 
 .advantages-lesson{
-  height: 143px;
-  width: 57px;
+  width: 89%;
   background: #eec643;
   color: white;
   border:0px;
@@ -500,13 +523,10 @@ select{
   letter-spacing: 0;
   font-weight: 400;
   text-transform: uppercase;
-  width: 59px;
   height: 145px; 
   margin-top: 15px;
-  margin-left: 13px;
+  margin-left: 10%;
   z-index: 2;
-  position: absolute;
-  right: -144px;
 }
 
 .advantages_form--form{
@@ -531,7 +551,7 @@ select{
 }
 
 .video--title{
-  width: 60%;
+  width: 100%;
 }
 
 .video_item1,
@@ -543,32 +563,6 @@ select{
   margin-left: 40px;
   margin-right: 40px;
 }
-
-.video_item1{
-  background-image: url(../img/video_card_img_1.jpg);
-  background-size: cover;
-  background-position-x: -35px;
-}
-
-.video_item2{
-  background-image: url(../img/video_card_img_2.jpg);
-}
-
-.video_item3{
-  background-image: url(../img/video_card_img_3.jpg);
-}
-
-.video_item4{
-  background-image: url(../img/video_card_img_4.jpg);
-}
-
-.video_img{
-  display: flex;
-  position: absolute;
-  margin-left: 110px;
-  margin-top: 80px;
-}
-
 
 .video_item1--title{
   padding-top: 136px;
@@ -597,11 +591,10 @@ select{
   display: none;
 }
 
-
 .menu{
-  width: 320px;
   margin-top: 16px;
   margin-left: -16px;
+  width: 100%;
 }
 
 .slider .slick-arrow{
@@ -661,8 +654,10 @@ select{
 }
 
 .contact--map{
-   height: 217px;
-   width: 286px;
+  min-height: 217px;
+  min-width: 286px;
+  height: 100%;
+  width: 100%;
 }
 
 .adress{
@@ -700,11 +695,12 @@ select{
   letter-spacing: 0;
   font-weight: 400;
   text-transform: uppercase;
-  width: 287px;
   height: 70px; 
   margin-top: 18px; 
   margin-bottom: 32px;
   z-index: 2;
+  min-width: 287px;
+  width: 100%;
 }
 
 
@@ -723,26 +719,27 @@ footer,
 
 @media (min-width: 1280px){
 
+  .col--lg-1 { width: 25%; }
+  .col--lg-2 { width: 50%; }
+  .col--lg-3 { width: 75%; }
+  .col--lg-4 { width: 100%; }
+
 .header{
   background-position: 100% 100%;
 }
 
-.video_mobile--hidden{
-  display: flex;
-}
-
-.video_mobile--slider{
-  display: none;
-}
-
 .container{
-  width: 1280px;
+  min-width: 1280px;
+  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
+  padding-left: 55px;
+  padding-right: 55px;
 }
 
 .wrapper{
   margin: 0 auto;
-  width: 1170px;
+  width: 100%;
 }
 
 .mobile-menu,
@@ -863,6 +860,7 @@ a{
 }
 
 .directions--row{
+  display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
 }
@@ -880,12 +878,20 @@ a{
   line-height: 50px;
 }
 
-.direction_form--text{
+.direction_form--text, .advantages-lesson_form--text{
   display: none;
 }
 
 .directions--row--items{
   margin-top: 30px;
+}
+
+.direction_item4--hidden{
+  width: 25%;
+}
+
+.direction_item3--mobile {
+  flex: 1 0 50%;
 }
 
 .direction_item5{
@@ -975,6 +981,7 @@ a{
   padding-top: 10px;
   padding-left: 25px;
   padding-bottom: 11px;
+  width: 500px;
 }
 
 .advantages_item--text_desktop{
@@ -1119,6 +1126,14 @@ a{
   line-height: 50px;
   right: 560px;
   top: -54px;
+}
+
+.video_mobile--hidden{
+  display: flex;
+}
+
+.video_mobile--slider{
+  display: none;
 }
 
 .video_item2,
