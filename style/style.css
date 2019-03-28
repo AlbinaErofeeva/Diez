@@ -23,6 +23,7 @@
   width: 100%;
   padding-left: 32px;
   padding-right: 32px;
+  position: relative;
 }
 
 .wrapper{
@@ -69,6 +70,8 @@ header{
   position: absolute;
   right: 0;
   z-index: 2;
+  outline:none;
+  cursor: pointer;
 }
 
 .mobile-menu:before,
@@ -136,8 +139,9 @@ header{
   right: 0;
   transition: all 1s;
   z-index: 1;
-  height: 255px;
+  min-height: 255px;
   width: 100%;
+  margin: 0 auto;
 }
 
 .menu-nav--list {
@@ -155,6 +159,13 @@ header{
   line-height: 40px;
   letter-spacing: 0;
   font-weight: 400;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.menu-nav--list--item:hover{
+  content: '';
+  background: #e87306;
 }
 
 .promo{
@@ -175,7 +186,7 @@ header{
 input[type=submit] {
   color: white;
   text-align: center;
-  border:0px;
+  border: 2px solid black;
   font-family: 'PT Sans';
   font-size: 16px;
   line-height: 22px;
@@ -186,7 +197,14 @@ input[type=submit] {
   height: 70px;  
   opacity: 1;
   background:black;
+  transition: all 1s ease;
+  cursor: pointer;
 }
+
+input[type=submit]:hover{
+  content: '';
+  background: #e87306;
+  }
 
 input[type=text], select{
   border : 0 none;
@@ -241,7 +259,14 @@ select{
   min-width: 287px;
   max-width: 576px;
   width: 100%;
+  transition: all 1s ease;
+  cursor: pointer;
 }
+
+.lesson:hover{
+  content: '';
+  background: #e87306;
+  }
 
 .promo_form--title{
   font-family: 'PT Sans';
@@ -372,7 +397,7 @@ select{
   background-size: cover;
   background-position: center;
   padding-top: 12px;
-  height: 143px;
+  min-height: 143px;
   padding: 0;
   width: 100%;
 }
@@ -426,13 +451,20 @@ select{
 }
 
 .direction_item5{
-  height: 143px;
+  min-height: 143px;
   width: 89%;
   background-color: #eec643;
   margin-top: 16px;
   position: relative;
   margin-left: 10%;
+  transition: all 1s ease;
+  cursor: pointer;
 }
+
+.direction_item5:hover{
+  content: '';
+  background: #e87306;
+  }
 
 .direction_form--text{
   color: black;
@@ -527,7 +559,15 @@ select{
   margin-top: 15px;
   margin-left: 10%;
   z-index: 2;
+  cursor: pointer;
+  transition: all 1s ease;
 }
+
+.advantages-lesson:hover{
+  content: '';
+  background: #e87306;
+  }
+
 
 .advantages_form--form{
   width: 270px;
@@ -701,8 +741,14 @@ select{
   z-index: 2;
   min-width: 287px;
   width: 100%;
+  cursor: pointer;
+  transition: all 1s ease;
 }
 
+.contact--lesson:hover{
+  content: '';
+  background: #e87306;
+  }
 
 footer,
 .video_img,
@@ -716,6 +762,17 @@ footer,
 .video_item1--text{
   display: none;
 }
+
+/* @media (min-width: 640px){
+  .direction_item1,
+  .direction_item2,
+  .direction_item3,
+  .advantages_item1,
+  .advantages_item2,
+  .advantages_item3{
+  min-height: 286px;
+}
+} */
 
 @media (min-width: 1280px){
 
@@ -833,14 +890,14 @@ a{
 }
 
 .direction_item1{
-  height: 267px;
+  min-height: 267px;
   width: 570px;
   margin-top: 0;
   margin-left: 16px;
 }
 
 .direction_item2, .direction_item3{
-  height: 267px;
+  min-height: 267px;
   width: 469px;
   margin-top: 0;
   margin-left: 99px;
@@ -854,7 +911,7 @@ a{
   background-size: cover;
   padding-top: 12px;
   width: 270px;
-  height: 267px;
+  min-height: 267px;
   padding-top: 0;
   margin-left: 16px;
 }
@@ -895,7 +952,7 @@ a{
 }
 
 .direction_item5{
-  height: 267px;
+  min-height: 267px;
   width: 270px;
   margin-top: 0;
   margin-left: 22px;
@@ -957,7 +1014,7 @@ a{
 .direction_item2--text_desktop{
   display: flex;
   padding-left: 31px;
-  padding-top: 30px;
+  padding-top: 20px;
   color: white;
   font-family: PT Sans;
   font-size: 20px;
@@ -1002,7 +1059,7 @@ a{
 
 .advantages_item1, .advantages_item2 {
   margin-top: 100px;
-  height: 469px;
+  min-height: 469px;
   width: 270px;
   background-size: cover;
   background-position: -100px 0;
@@ -1061,7 +1118,14 @@ a{
   width: 270px;
   height: 70px;  
   opacity: 1;
+  transition: all 1s ease;
+  cursor: pointer;
 }
+
+.advantages_form input[type=submit]:hover{
+  content: '';
+  background: #e87306;
+  }
 
 .advantages_form input[type=text], .advantages_form--select{
   border : 0 none;
@@ -1089,7 +1153,7 @@ a{
 
 .advantages_item3{
   margin-top: 0;
-  height: 570px;
+  min-height: 570px;
   width: 270px;
   background-size: cover;
   background-position: -140px 0;
