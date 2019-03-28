@@ -147,7 +147,6 @@ header{
 .menu-nav--list {
   list-style: none;
   padding-top: 80px;
-  padding-left: 32px;
 }
 
 .menu-nav--list--item{
@@ -797,6 +796,10 @@ footer,
 .wrapper{
   margin: 0 auto;
   width: 100%;
+}
+
+.menu--nav{
+  display: none;
 }
 
 .mobile-menu,
